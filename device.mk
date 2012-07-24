@@ -16,6 +16,12 @@
 
 $(call inherit-product, device/moto/wingray/device_base.mk)
 
+# inherit from the non-open-source side, if present
+$(call inherit-product-if-exists, vendor/motorola/everest/everest-vendor.mk)
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
 # Overrides
 DEVICE_PACKAGE_OVERLAYS := \
     device/moto/everest/overlay device/moto/wingray/overlay

@@ -22,3 +22,5 @@
 
 include device/moto/wingray/BoardConfig.mk
 BOARD_KERNEL_CMDLINE := product_type=uw
+BOARD_USES_HC_RADIO := true
+BOARD_USES_LEGACY_RIL := true

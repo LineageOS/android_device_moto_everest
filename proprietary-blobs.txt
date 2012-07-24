@@ -105,6 +105,7 @@
 /system/lib/libnvwsi.so
 /system/lib/libpkip.so
 /system/lib/libpppd_plugin-ril.so
+/system/lib/libril.so
 /system/lib/libril_rds.so
 /system/lib/libstagefrighthw.so
 /system/lib/libtpa.so

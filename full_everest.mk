@@ -14,17 +14,20 @@
 
 #
 # This file is the build configuration for a full Android
-# build for stingray hardware. This cleanly combines a set of
+# build for everest hardware. This cleanly combines a set of
 # device-specific aspects (drivers) with a device-agnostic
 # product configuration (apps).
 #
 
+# Get the long list of APNs
+PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # A few more packages that aren't quite used on all builds
 PRODUCT_PACKAGES := \
-        rild \
-        HoloSpiralWallpaper \
-        LiveWallpapersPicker \
-        VisualizationWallpapers
+    rild \
+    HoloSpiralWallpaper \
+    LiveWallpapersPicker \
+    VisualizationWallpapers
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
