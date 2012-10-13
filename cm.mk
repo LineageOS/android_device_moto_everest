@@ -4,10 +4,6 @@ $(call inherit-product, vendor/cm/config/gsm.mk)
 # Release name
 PRODUCT_RELEASE_NAME := XOOM-UMTS
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_WIDTH := 1280
-
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
