@@ -12,6 +12,8 @@ persist.ril.tcmd.ttydevice=/dev/ttyUSB3
 # Leave default mode to 4 (CDMA) but need it to be Global (7) for LTE/CDMA
 ro.telephony.default_network=0
 ro.telephony.call_ring.multiple=false
+ro.ril.ntmodeglobal=true
+ro.telephony.ril.v3=signalstrength,skipbrokendatacall,writeaidonly
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
