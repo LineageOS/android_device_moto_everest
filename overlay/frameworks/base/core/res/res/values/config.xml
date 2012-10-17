@@ -93,4 +93,6 @@
         <item>/dev/bus/usb/002</item>
     </string-array>
 
+    <bool name="config_sms_capable">true</bool>
+
 </resources>
