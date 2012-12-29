@@ -24,3 +24,5 @@ include device/moto/wingray/BoardConfig.mk
 BOARD_KERNEL_CMDLINE := product_type=uw
 BOARD_USES_HC_RADIO := true
 BOARD_USES_LEGACY_RIL := true
+
+BOARD_BLUEDROID_VENDOR_CONF := device/moto/everest/bluetooth/vnd_everest.txt
