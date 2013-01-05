@@ -17,7 +17,8 @@ ro.telephony.ril.v3=signalstrength,skipbrokendatacall,writeaidonly
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
-ro.opengles.version = 131072
+ro.opengles.version=131072
+ro.opengles.surface.rgb565=true
 
 # UA profile
 ro.mot.hw.uaprof=http://uaprof.motorola.com/phoneconfig/motomz601/Profile/motomz601.rdf
