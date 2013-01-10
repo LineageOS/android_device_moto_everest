@@ -24,4 +24,4 @@ PRODUCT_COPY_FILES += \
 
 # Overrides
 DEVICE_PACKAGE_OVERLAYS := \
-    device/moto/everest/overlay device/moto/wingray/overlay
+    device/moto/everest/overlay device/moto/wingray/overlay-common
