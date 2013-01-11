@@ -21,8 +21,10 @@
 #
 
 include device/moto/wingray/BoardConfig.mk
+
+# Everest specific
 BOARD_KERNEL_CMDLINE := product_type=uw
 BOARD_USES_HC_RADIO := true
 BOARD_USES_LEGACY_RIL := true
-
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/everest/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/moto/everest/bluetooth/vnd_everest.txt
