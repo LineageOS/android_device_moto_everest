@@ -22,15 +22,30 @@
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
-# A few more packages that aren't quite used on all builds
-PRODUCT_PACKAGES := \
-    rild \
-    Mms
+# Additional settings used in all AOSP builds
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.com.android.dateformat=MM-dd-yyyy
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
+# Put en_GB first in the list, so make it default.
+PRODUCT_LOCALES := en_GB
+
+PRODUCT_PACKAGES := \
+    libfwdlockengine \
+    WAPPushManager
+
+# Get some sounds
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
+
+# Get the TTS language packs
+$(call inherit-product-if-exists, external/svox/pico/lang/all_pico_languages.mk)
+
+# Get a list of languages.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
+
+# Get everything else from the parent package
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
+
+# Device specific
 $(call inherit-product, device/moto/everest/device.mk)
 
 # Discard inherited values and use our own instead.
